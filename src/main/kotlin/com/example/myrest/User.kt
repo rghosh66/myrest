@@ -1,14 +1,11 @@
 package com.example.myrest
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
 
 @Entity
 @Table()
-data class MyUser(
+data class Users(
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id : Int = 0,
                 val name: String = "")

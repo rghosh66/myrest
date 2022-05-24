@@ -2,7 +2,10 @@ package com.example.myrest
 
 import org.springframework.data.jpa.repository.JpaRepository
 
-interface UserRepository : JpaRepository<MyUser, Int> {
+interface UserRepository : JpaRepository<Users, Int> {
 
-    fun findByName(name:String) : MyUser
+    fun findByName(name:String) : Users
+    fun getByName(name: String): List<Users>
+
+
 }
